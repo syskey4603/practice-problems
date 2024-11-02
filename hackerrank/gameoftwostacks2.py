@@ -14,7 +14,7 @@ def allcombinations(maxsum, a,b):
     return highestmoves, currentsum, alastmoveindex, blastmoveindex
 
 def twoStacks(maxSum, a,b):
-
+    blastmoveindex = len(b)-1
     highestmoves, currentsum, alastmoveindex =  findmaxmoves(0, 0, maxSum, a, len(a)-1)
     if currentsum < maxSum:
         highestmoves, currentsum, blastmoveindex = findmaxmoves(currentsum, highestmoves, maxSum, b, len(b)-1)
@@ -42,10 +42,9 @@ def findmaxmoves(currentsum, currentmoves, maxsum, a, startindex):
 
 
 
-
-a = [11, 6, 1, 13, 14, 7, 8, 10, 3, 17, 7, 18, 6, 4, 5, 13, 17, 4, 16, 9, 17, 16, 12, 6, 7]
-b = [10, 15, 13, 17, 10, 7, 0, 16, 8, 13, 11, 8, 14, 13]
-maxsum = 55
+a = [4, 2, 4, 6, 1]
+b = [2, 1, 8, 5]
+maxsum = 10
 print(allcombinations(maxsum, a,b))
 
 
