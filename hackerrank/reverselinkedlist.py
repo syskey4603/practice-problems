@@ -21,19 +21,16 @@ class SinglyLinkedList:
         return
     
     def printinreverse(self):
-        oglast = findlast(self.head)
-        ogfirst = self.head
-        first = self.head
-        last = findlast(self.head)
-        while last != ogfirst:
-            secondlast = findsecondlast(self.head)
-            secondlast.next = first
-            last.next = first.next
-            self.head = last
-            first = self.head
-            print(last.data)
-            print(self.head.data)
-            last = findlast(self.head)
+        templast = None
+        while self.head:
+            t = self.head.next
+            self.head.next = templast
+            templast = self.head
+            self.head = t
+        self.head = templast
+            
+
+
 
 
         
@@ -69,3 +66,13 @@ newlist.insert_node(2)
 newlist.insert_node(3)
 newlist.printinreverse()
 newlist.printlist()
+
+
+'''
+set the new first element to the next one
+make the first element point to none
+the next element points to that one
+
+repeat
+
+''' 
