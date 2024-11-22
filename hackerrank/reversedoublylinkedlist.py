@@ -22,13 +22,16 @@ def reverselist(head):
     last = head
     while last.next:
         last=last.next
+    newlist = DoublyLinkedList()
     while last:
         print(last.data)
+        newlist.insert_node(last.data)
         last = last.prev
+    return newlist.head
 
 
 newlist = DoublyLinkedList()
 newlist.insert_node(1)
 newlist.insert_node(2)
 newlist.insert_node(3)
-reverselist(newlist.head)
+print(reverselist(newlist.head))
