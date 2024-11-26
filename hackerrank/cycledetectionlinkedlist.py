@@ -27,7 +27,22 @@ while last.next:
     last = last.next
 last.next = newlist.head
 
-cur = newlist.head
+
+def isCycle(head):
+    cyclelist = []
+    cur = head
+    while cur.next:
+        if cur in cyclelist:
+            return 1
+        cyclelist.append(cur)
+        cur = cur.next
+    return 0    
+    
+
+
+print(isCycle(newlist.head))
+
+"""cur = newlist.head
 while cur.next:
     print(cur.data)
-    cur = cur.next
+    cur = cur.next"""
