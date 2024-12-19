@@ -3,20 +3,17 @@ def kangaroo(x1, v1, x2, v2):
         diffbetweenstart = x2-x1
         diffbetweenjump = v1-v2
         if factorfunc(diffbetweenjump, diffbetweenstart):
-            print("YES")
-        else:
-            print("NO")
+            return("YES")
         
     elif x1 > x2 and v1 < v2:
         diffbetweenstart = x1-x2
         diffbetweenjump = v2-v1
         if factorfunc(diffbetweenjump, diffbetweenstart):
-            print("YES")
-        else:
-            print("NO")
+            return("YES")
 
-    else:
-        print("NO")
+
+
+    return("NO")
     
 
 def factorfunc(a, b):
