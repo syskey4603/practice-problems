@@ -31,3 +31,5 @@ d = 1
 #print(verifytriplet(triplet, d, arr))
 
 print(beautifulTriplets(d,arr))
+
+#testing new method
