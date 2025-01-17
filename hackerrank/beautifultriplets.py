@@ -32,4 +32,3 @@ d = 1
 
 print(beautifulTriplets(d,arr))
 
-#testing new method
