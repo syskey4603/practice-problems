@@ -30,3 +30,5 @@ linkedlist.insert_node(2)
 linkedlist.insert_node(1)
 
 linkedlist.printlist()
+
+#testing
