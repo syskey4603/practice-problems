@@ -1,3 +1,4 @@
+#not the problem solving this is part of the python problems
 nestedlist = []
 for _ in range(int(input())):
     templist=[]
