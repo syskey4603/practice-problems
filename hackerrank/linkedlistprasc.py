@@ -18,3 +18,6 @@ class SinglyLinkedList:
             last = last.next
         last.next = newnode
         return
+
+linkedlist = SinglyLinkedList()
+linkedlist.insert_node(Node(4))
