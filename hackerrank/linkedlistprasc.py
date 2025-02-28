@@ -18,6 +18,13 @@ class SinglyLinkedList:
             last = last.next
         last.next = newnode
         return
+    def displaylinkedlist(self):
+        cur = self.head
+        while cur:
+            cur = cur.next
+        print(cur)
 
 linkedlist = SinglyLinkedList()
 linkedlist.insert_node(Node(4))
+
+linkedlist.displaylinkedlist()
